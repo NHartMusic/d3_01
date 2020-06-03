@@ -1,6 +1,13 @@
+const DUMMY_DATA = [
+    { id: 'd1', value: 10, region: 'USA' },
+    { id: 'd2', value: 11, region: 'Germany' },
+    { id: 'd3', value: 12, region: 'Costa Rica' },
+    { id: 'd4', value: 6, region: 'Palestine' },
+]
+
 d3.select('div')
     .selectAll('p')
-    .data([1, 2, 3])
+    .data(DUMMY_DATA)
     .enter()
     .append('p')
-    .text('Hello!')
+    .text(dta => dta.region)
